@@ -1,0 +1,426 @@
+/* RESET CSS: */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font: inherit;
+  scroll-behavior: smooth;
+  vertical-align: baseline;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+/* VARIÁVEIS: */
+:root {
+  --font-principal: "B612", sans-serif;
+  --fonte-sec: "Montserrat", sans-serif;
+}
+
+/* ESTILIZAÇÃO: */
+
+body {
+  background-image: url(./assets/imgs/bohemian.jpg);
+  background-size: cover;
+  max-height: 100vh;
+}
+
+main {
+  max-width: 1200px;
+  width: 100%;
+  margin: 12rem 0rem 0rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+main .title {
+  font-family: var(--fonte-sec);
+  font-size: 6rem;
+  font-weight: 900;
+  margin-bottom: 5rem;
+  color: #ffa7f9;
+}
+
+.movie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie .img {
+  width: 230px;
+  margin-right: 5rem;
+}
+
+.movie .info {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.movie .info .box .description {
+  font-family: var(--font-principal);
+  font-size: 1.2rem;
+  font-weight: 400;
+  max-width: 60ch;
+
+  line-height: 2rem;
+
+  text-align: left;
+}
+
+.info .box .buttons .b-nav {
+  display: flex;
+  column-gap: 3rem;
+  margin-top: 3rem;
+}
+
+.info .box .buttons .b-nav li .watch {
+  font-family: "Open Sans";
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  background-color: #7c2676;
+  border: 1px solid white;
+  color: white;
+}
+
+.info .box .buttons .b-nav li .trailer {
+  font-family: "Open Sans";
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  background-color: #7c2676;
+  border: 1px solid white;
+}
+
+.movie .info .atributes {
+  max-width: 480px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie .info .atributes .time {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.movie .info .atributes .time img {
+  width: 25px;
+}
+
+.movie .info .atributes .time .minutes {
+  font-family: var(--font-principal);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.movie .info .atributes .year {
+  font-family: var(--font-principal);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.info .atributes .avaliation {
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+.info .atributes .avaliation img {
+  width: 30px;
+}
+
+/* RESPONSIVO */
+
+@media (min-width: 299px) and (max-width: 425px) {
+  body {
+    background: url(./assets/imgs/1469579.jpg);
+    background-size: auto 900px;
+  }
+
+  main {
+    max-width: 425px;
+    margin: 0rem 0rem 0rem 0rem;
+  }
+
+  main .title {
+    font-size: 3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 22.3rem;
+    text-align: center;
+  }
+
+  .movie {
+    flex-direction: column;
+  }
+
+  .movie .img {
+    display: none;
+  }
+
+  .movie .info {
+    width: 100vw;
+    gap: 1rem;
+    align-items: center;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .movie .info .box {
+    height: 43.9vh;
+
+    padding: 1rem;
+    background-color: #19191f;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+
+  .movie .info .box .description {
+    font-size: 0.9rem;
+    line-height: 1rem;
+    margin-top: 0.8rem;
+    text-align: center;
+  }
+
+  .movie .info .box .buttons .b-nav {
+    justify-content: space-evenly;
+  }
+
+  .movie .info .box .buttons {
+    border-top: rgba(196, 196, 196, 0.08);
+  }
+
+  .info .box .buttons .b-nav li .watch {
+    font-size: 0.6rem;
+  }
+
+  .info .box .buttons .b-nav li .trailer {
+    font-size: 0.6rem;
+  }
+
+  .movie .info .atributes {
+    column-gap: 1.3rem;
+    padding-bottom: 0rem;
+  }
+
+  .movie .info .atributes .time {
+    column-gap: 0.5rem;
+  }
+
+  .movie .info .atributes .time img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .movie .info .atributes .time .minutes {
+    font-size: 1rem;
+  }
+
+  .movie .info .atributes .year {
+    font-size: 1rem;
+  }
+
+  .movie .info .atributes .avaliation {
+    column-gap: 0.1rem;
+  }
+
+  .movie .info .atributes .avaliation img {
+    width: 22px;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 769px) {
+  body {
+    background-image: url(./assets/imgs/bohemian.jpg);
+    background-size: cover;
+    height: 1400px;
+  }
+
+  main {
+    max-width: 600px;
+    margin: 10rem 0rem 0rem 3rem;
+  }
+
+  main .title {
+    font-size: 3.5rem;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .movie {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .movie .capa {
+    width: 200px;
+    margin-right: 0rem;
+  }
+
+  .info {
+    max-width: 400px;
+    padding: 2rem;
+    gap: 1rem;
+    align-items: left;
+  }
+
+  .info .description {
+    font-size: 0.7rem;
+    padding: 0rem;
+    line-height: 1.5rem;
+  }
+
+  .info .atributes {
+    max-width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+  }
+
+  .info .atributes .time {
+    column-gap: 0.3rem;
+  }
+
+  .info .atributes .time img {
+    width: 10px auto;
+  }
+
+  .info .atributes .time .minutes {
+    font-size: 1rem;
+  }
+
+  .info .atributes .year {
+    font-size: 1rem;
+  }
+
+  .info .atributes .avaliation {
+    column-gap: 0.1rem;
+  }
+
+  .info .atributes .avaliation img {
+    width: 22px;
+  }
+
+  .info .buttons .b-nav {
+    margin-top: 1.5rem;
+    column-gap: 1rem;
+    justify-content: space-around;
+  }
+
+  .info .buttons .b-nav li .watch {
+    font-size: 0.4rem;
+  }
+
+  .info .buttons .b-nav li .trailer {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 770px) and (max-width: 1025px) {
+  body {
+    background-image: url(./assets/imgs/bohemian.jpg);
+    background-size: cover;
+    height: 720px;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 10rem 0rem 0rem 1.5rem;
+  }
+
+  main .title {
+    font-size: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
+  .movie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .movie .capa {
+    width: 220px;
+    margin-right: 0rem;
+  }
+
+  .info {
+    max-width: 400px;
+    gap: 1rem;
+    align-items: left;
+  }
+
+  .info .description {
+    font-size: 0.9rem;
+    padding: 0rem;
+    line-height: 1.5rem;
+
+    text-align: left;
+  }
+
+  .info .atributes {
+    max-width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+  }
+
+  .info .atributes .time {
+    column-gap: 0.3rem;
+  }
+
+  .info .atributes .time img {
+    width: 10px auto;
+  }
+
+  .info .atributes .time .minutes {
+    font-size: 1rem;
+  }
+
+  .info .atributes .year {
+    font-size: 1rem;
+  }
+
+  .info .atributes .avaliation {
+    column-gap: 0.1rem;
+  }
+
+  .info .atributes .avaliation img {
+    width: 22px;
+  }
+
+  .info .buttons .b-nav {
+    margin-top: 1.5rem;
+    column-gap: 1rem;
+  }
+
+  .info .buttons .b-nav li .watch {
+    font-size: 1rem;
+  }
+
+  .info .buttons .b-nav li .trailer {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1026px) {
+  body {
+    background-image: url(./assets/imgs/bohemian.jpg);
+    background-size: auto 1260px;
+  }
+}
